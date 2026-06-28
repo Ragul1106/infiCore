@@ -20,80 +20,137 @@ const Home = () => {
     <div className="bg-gray-50">
 
       {/* HERO SECTION */}
-      <section className="bg-gradient-to-br from-[#050816] via-[#0f172a] to-[#1e3a8a] text-white min-h-screen flex flex-col md:flex-row items-center px-6 md:px-16 py-16">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#050816] via-[#0f172a] to-[#1e3a8a] text-white min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-6 md:py-10 gap-6">
 
-        {/* Left */}
-        <div className="md:w-1/2">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight bg-gradient-to-r from-cyan-400 via-blue-400 to-green-400 bg-clip-text text-transparent">
-            Engineering Infinite Possibilities
-          </h1>
+  {/* Animated Tech Grid */}
+  <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#00ffff22_1px,transparent_1px),linear-gradient(to_bottom,#00ffff22_1px,transparent_1px)] bg-[size:35px_35px]"></div>
 
-          <p className="mt-6 text-lg md:text-xl text-gray-300 leading-8 max-w-xl">
-            Innovating through Embedded Systems, IoT, PCB Design, EV
-            Technologies, Product Development, and Industry-focused Engineering Training.
-          </p>
+  {/* Moving Signal Lines */}
+  <div className="absolute top-20 left-0 w-full h-[2px] bg-cyan-400/40 animate-pulse"></div>
+  <div className="absolute bottom-32 left-0 w-full h-[1px] bg-green-400/30 animate-pulse"></div>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <button
-              onClick={() => navigate("/courses")}
-              className="bg-green-500 px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
-            >
-              Explore Courses
-            </button>
+  {/* Floating Nodes */}
+  <div className="absolute top-24 left-24 w-4 h-4 bg-cyan-400 rounded-full animate-ping"></div>
+  <div className="absolute top-1/2 left-1/3 w-3 h-3 bg-green-400 rounded-full animate-bounce"></div>
+  <div className="absolute bottom-24 right-24 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
 
-            <button
-              onClick={() => navigate("/contact")}
-              className="border border-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-black transition"
-            >
-              Contact Us
-            </button>
-          </div>
-        </div>
+  {/* Glow Effects */}
+  <div className="absolute top-20 left-20 w-48 h-48 bg-cyan-500/20 blur-3xl rounded-full animate-pulse"></div>
+  <div className="absolute bottom-20 right-20 w-52 h-52 bg-green-500/20 blur-3xl rounded-full animate-pulse"></div>
 
-        {/* Right */}
-        <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-          <img
-            src={banner}
-            alt="Banner"
-            className="w-[300px] md:w-[420px] rounded-3xl shadow-xl"
-          />
-        </div>
-      </section>
+  {/* Left */}
+  <div className="md:w-1/2 relative z-10">
+    <h1 className="text-4xl md:text-6xl font-bold leading-tight bg-gradient-to-r from-cyan-400 via-blue-400 to-green-400 bg-clip-text text-transparent max-w-2xl">
+      Engineering Infinite Possibilities
+    </h1>
+
+    <p className="mt-6 text-lg md:text-xl text-gray-300 leading-8 max-w-2xl">
+      Innovating through Embedded Systems, IoT, PCB Design, EV Technologies,
+      Product Development, and Industry-focused Engineering Training.
+    </p>
+
+    {/* Live Tech Badges */}
+    <div className="mt-6 flex flex-wrap gap-3">
+      <div className="px-4 py-2 bg-cyan-500/20 border border-cyan-400 rounded-full text-cyan-300 backdrop-blur-md animate-pulse">
+        Embedded Systems
+      </div>
+
+      <div className="px-4 py-2 bg-green-500/20 border border-green-400 rounded-full text-green-300 backdrop-blur-md ">
+        IoT Automation
+      </div>
+
+      <div className="px-4 py-2 bg-blue-500/20 border border-blue-400 rounded-full text-blue-300 backdrop-blur-md animate-pulse">
+        AI Edge
+      </div>
+
+      <div className="px-4 py-2 bg-purple-500/20 border border-purple-400 rounded-full text-purple-300 backdrop-blur-md ">
+        Smart Control
+      </div>
+    </div>
+
+    <div className="mt-8 flex flex-wrap gap-4">
+      <button
+        onClick={() => navigate("/courses")}
+        className="bg-green-500 px-6 py-3 rounded-xl font-semibold hover:scale-105 transition duration-300 shadow-lg"
+      >
+        Explore Courses
+      </button>
+
+      <button
+        onClick={() => navigate("/contact")}
+        className="border border-white px-6 cursor-pointer py-3 rounded-xl font-semibold hover:bg-white hover:text-black transition duration-300"
+      >
+        Contact Us
+      </button>
+    </div>
+  </div>
+
+  {/* Right */}
+  <div className="md:w-1/2 flex justify-center md:justify-center md:-ml-12 mt-6 md:mt-0 relative z-10">
+
+    {/* AI Pulse Rings */}
+    <div className="absolute w-[460px] h-[460px] md:w-[700px] md:h-[700px] rounded-full border border-cyan-400/20 animate-ping"></div>
+    <div className="absolute w-[430px] h-[430px] md:w-[650px] md:h-[650px] rounded-full border border-green-400/20 animate-pulse"></div>
+
+    {/* Main Image */}
+    <img
+      src={banner}
+      alt="Banner"
+      className="relative w-[420px] md:w-[650px] rounded-3xl shadow-[0_0_40px_rgba(0,255,255,0.25)] hover:scale-105 transition duration-500"
+    />
+
+    {/* Floating Automation Cards */}
+    <div className="absolute top-8 -left-6 bg-white/10 backdrop-blur-xl border border-cyan-400/30 px-4 py-3 rounded-xl shadow-xl animate-bounce">
+      🔵 IoT Connected
+    </div>
+
+    <div className="absolute bottom-10 -right-6 bg-white/10 backdrop-blur-xl border border-green-400/30 px-4 py-3 rounded-xl shadow-xl animate-pulse">
+      ⚡ Embedded Live
+    </div>
+
+    {/* Floating Chip */}
+    <div className="absolute bottom-20 left-8 w-16 h-16 border border-cyan-400 rounded-xl rotate-12 animate-spin"></div>
+
+  </div>
+
+</section>
 
       {/* FOUNDER SECTION */}
-      <section className="bg-white px-6 md:px-16 py-16">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+     <section className="bg-white px-6 md:px-16 py-16">
+  <div className="grid md:grid-cols-2 gap-10 items-center">
 
-          <div>
-            <img
-              src={founder}
-              alt="Founder"
-              className="rounded-2xl shadow-lg"
-            />
-          </div>
+    {/* Image Left (moved slightly right) */}
+    <div className="flex justify-center md:justify-center md:ml-16">
+      <img
+        src={founder}
+        alt="Founder"
+        className="w-64 md:w-80 h-auto rounded-2xl shadow-lg object-cover"
+      />
+    </div>
 
-          <div>
-            <h2 className="text-3xl md:text-5xl font-bold text-blue-900 mb-6">
-              Meet Our Founder
-            </h2>
+    {/* Text Right */}
+    <div>
+      <h2 className="text-3xl md:text-5xl font-bold text-blue-900 mb-6">
+        Meet Our Founder
+      </h2>
 
-            <h3 className="text-2xl font-semibold text-green-700 mb-2">
-              Askar Ali N
-            </h3>
+      <h3 className="text-2xl font-semibold text-green-700 mb-2">
+        Askar Ali N
+      </h3>
 
-            <p className="text-lg text-gray-600 mb-4">
-              Founder & CEO
-            </p>
+      <p className="text-lg text-gray-600 mb-4">
+        Founder & CEO
+      </p>
 
-            <p className="text-gray-700 leading-8 text-lg">
-              With a vision to bridge academic knowledge and industrial needs,
-              InfiCore Technologies was founded to create practical engineers,
-              innovators, and future entrepreneurs through real-world product development.
-            </p>
-          </div>
+      <p className="text-gray-700 leading-8 text-lg">
+        With a vision to bridge academic knowledge and industrial needs,
+        InfiCore Technologies was founded to create practical engineers,
+        innovators, and future entrepreneurs through real-world product development.
+      </p>
+    </div>
 
-        </div>
-      </section>
+  </div>
+</section>
 
       {/* STATS */}
       <section className="px-6 md:px-16 py-16 bg-gray-100">

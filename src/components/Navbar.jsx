@@ -26,25 +26,40 @@ const Navbar = () => {
 
           {/* Logo */}
           <Link
-            to="/"
-            className="flex items-center gap-3 group flex-shrink-0"
-          >
-            <img
-              src={logo}
-              alt="InfiCore Logo"
-              className="w-12 h-12 md:w-14 md:h-14 object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
-            />
+  to="/"
+  className="flex items-center gap-3 group flex-shrink-0"
+>
+  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden">
+    <img
+      src={logo}
+      alt="InfiCore Logo"
+      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+    />
+    
+  </div>
 
-            <div>
-              <h1 className="text-xl md:text-2xl font-bold text-white transition duration-300 group-hover:text-green-400">
-                InfiCore
-              </h1>
+  <div>
+  <h1
+  className="text-2xl md:text-4xl font-extrabold"
+  style={{
+    fontFamily: "'Oxanium', sans-serif",
+    letterSpacing: "4.5px"
+  }}
+>
+  <span className="text-[#1E6BFF]">Infi</span>
+  <span className="text-[#0a0b0c]">Core</span>
+</h1>
 
-              <p className="text-[10px] md:text-xs text-gray-300 tracking-wide">
-                Engineering Infinite Possibilities
-              </p>
-            </div>
-          </Link>
+    {/* <p
+      className="text-[10px] md:text-xs uppercase tracking-[3px] text-blue-400"
+      style={{
+        fontFamily: "'Montserrat', sans-serif"
+      }}
+    >
+      Engineering Infinite Possibilities
+    </p> */}
+  </div>
+</Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
