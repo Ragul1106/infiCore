@@ -26,7 +26,7 @@ const Home = () => {
   <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#00ffff22_1px,transparent_1px),linear-gradient(to_bottom,#00ffff22_1px,transparent_1px)] bg-[size:35px_35px]"></div>
 
   {/* Moving Signal Lines */}
-  <div className="absolute top-20 left-0 w-full h-[2px] bg-cyan-400/40 animate-pulse"></div>
+  {/* <div className="absolute top-20 left-0 w-full h-[2px] bg-cyan-400/40 animate-pulse"></div> */}
   <div className="absolute bottom-32 left-0 w-full h-[1px] bg-green-400/30 animate-pulse"></div>
 
   {/* Floating Nodes */}
