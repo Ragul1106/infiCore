@@ -1,4 +1,5 @@
 import founder from "../assets/images/founder.jpeg";
+import banner from "../assets/images/banner.jpg";
 import { useNavigate } from "react-router-dom";
 import {
   Cpu,
@@ -52,8 +53,8 @@ const Home = () => {
         {/* Right */}
         <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
           <img
-            src={founder}
-            alt="Founder"
+            src={banner}
+            alt="Banner"
             className="w-[300px] md:w-[420px] rounded-3xl shadow-xl"
           />
         </div>
