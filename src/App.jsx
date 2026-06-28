@@ -8,6 +8,10 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Courses from "./pages/Courses";
 import Contact from "./pages/Contact";
+import Programs from "./pages/Programs";
+import Projects from "./pages/Projects";
+import Colleges from "./pages/Colleges";
+import Roadmap from "./pages/Roadmap";
 
 function App() {
   return (
@@ -21,6 +25,10 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/programs" element={<Programs />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/colleges" element={<Colleges />} />
+        <Route path="/roadmap" element={<Roadmap />} />
       </Routes>
 
       <Footer />
