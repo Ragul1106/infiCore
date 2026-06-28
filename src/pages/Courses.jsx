@@ -150,7 +150,7 @@ const Courses = () => {
         <Award className="w-14 h-14 mx-auto mb-5" />
 
         <h2 className="text-2xl md:text-4xl font-bold mb-4">
-          Certification • Internship • Placement
+          Certification • Internship • Placement Support
         </h2>
 
         <p className="text-lg max-w-3xl mx-auto leading-8">
