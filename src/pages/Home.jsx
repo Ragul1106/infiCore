@@ -1,4 +1,4 @@
-import founder from "../assets/images/founder.png";
+import founder from "../assets/images/founder.jpeg";
 import { useNavigate } from "react-router-dom";
 import {
   Cpu,
